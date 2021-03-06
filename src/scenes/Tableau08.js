@@ -13,7 +13,7 @@ class Tableau08 extends Tableau{
     }   
     create() {
         super.create();
-        console.log("Ta grosse mère la pute");
+        console.log("Tmor");
 
         
 
@@ -41,7 +41,7 @@ class Tableau08 extends Tableau{
             0,
             game.config.width,
             game.config.height,
-            'b2'
+            'b3'
         );
         this.sky2.setScrollFactor(0);
         this.sky2.setOrigin(0,0);
@@ -53,7 +53,7 @@ class Tableau08 extends Tableau{
             0,
             game.config.width,
             game.config.height,
-            'b3'
+            'b2'
         );
         this.sky3.setScrollFactor(0);
         this.sky3.setOrigin(0,0);
@@ -118,14 +118,11 @@ class Tableau08 extends Tableau{
         super.update();
         //le ciel se déplace moins vite que la caméra pour donner un effet paralax
         this.sky.tilePositionX=this.cameras.main.scrollX*0.6;
-        this.sky.tilePositionY=this.cameras.main.scrollY*0.2;
 
         this.sky3.tilePositionX=this.cameras.main.scrollX*0.4+250;
-        this.sky3.tilePositionY=this.cameras.main.scrollY*0.3+15;
 
         //le deuxième ciel se déplace moins vite pour accentuer l'effet
         this.sky2.tilePositionX=this.cameras.main.scrollX*0.3+500;
-        this.sky2.tilePositionY=this.cameras.main.scrollY*0.1+30;
 
     }
 
