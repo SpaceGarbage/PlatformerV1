@@ -8,6 +8,7 @@ class TableauZoo extends Tableau{
         this.load.image('rosasse', 'assets/rosasse.png');
         this.load.image('chapotasse', 'assets/chapotasse.png');
         this.load.image('kingasse', 'assets/kingasse.png');
+        this.load.image('jumpeur', 'assets/kingasse.png');
     }
     create() {
         super.create();
@@ -19,6 +20,7 @@ class TableauZoo extends Tableau{
         this.chapotasse = new Chapotasse(this,100,300);
         this.rosasse = new Rosasse(this,400,350);
         this.boulasse = new Boulasse(this,500,100);
+        this.jumpeur = new MonsterJumping(this,500,100);
 
 
         this.platforms.create(50 ,200,"ground");
@@ -57,6 +59,7 @@ class TableauZoo extends Tableau{
         this.physics.add.collider(this.chapotasse, this.platforms)
         this.physics.add.collider(this.rosasse, this.platforms)
         this.physics.add.collider(this.boulasse, this.platforms)
+        this.physics.add.collider(this.jumpeur, this.platforms)
         this.physics.add.collider(this, this.walls)
     }
 
